@@ -620,16 +620,6 @@ def mimic_patient_wise(year, patient, seq_length, seq_step, num_signals):
 
     samples = aa
     labels = bb
-    print('samples')
-    print(samples)
-    print(samples.shape)
-    print(type(samples))
-    print('---------------------------------------')
-    print('labels')
-    print(labels)
-    print(labels.shape)
-    print(type(labels))
-    print('---------------------------------------')
     return samples, labels
 
 def mimic_test_patient_wise(year, patient, seq_length, seq_step, num_signals):
