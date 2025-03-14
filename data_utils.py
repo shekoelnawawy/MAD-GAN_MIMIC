@@ -465,7 +465,7 @@ def kdd99_test(seq_length, seq_step, num_signals):
 
 
 def mimic(year, seq_length, seq_step, num_signals):
-    train = np.load('./data/mimic_train_'+year+'.npy')
+    train = np.array(np.load('./data/mimic_train_'+year+'.npy'), dtype=float)
     print('load mimic_train from .npy')
     m, n = train.shape  # m=562387, n=35
     # normalization
@@ -517,7 +517,7 @@ def mimic(year, seq_length, seq_step, num_signals):
     return samples, labels
 
 def mimic_test(year, seq_length, seq_step, num_signals):
-    test = np.load('./data/mimic_test_'+year+'.npy')
+    test = np.array(np.load('./data/mimic_test_'+year+'.npy'), dtype=float)
     print('load mimic_test from .npy')
 
     m, n = test.shape  # m1=494021, n1=35
@@ -624,7 +624,7 @@ def mimic_patient_wise(year, patient, seq_length, seq_step, num_signals):
     return samples, labels
 
 def mimic_test_patient_wise(year, patient, seq_length, seq_step, num_signals):
-    test = np.load('./data/mimic_test_'+year+'_'+patient+'.npy')
+    test = np.array(np.load('./data/mimic_test_'+year+'_'+patient+'.npy'), dtype=float)
     print('load mimic_test from .npy')
 
     m, n = test.shape  # m1=494021, n1=35
