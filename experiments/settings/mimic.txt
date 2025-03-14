@@ -8,7 +8,7 @@
 "num_epochs": 100,
 "num_signals": 4,
 "num_generated_features": 4,
-"seq_length": 1,
+"seq_length": 2,
 "seq_step": 1,
 "normalise": false,
 "scale": 0.1,
