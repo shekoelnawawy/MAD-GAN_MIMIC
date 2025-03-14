@@ -464,9 +464,9 @@ def kdd99_test(seq_length, seq_step, num_signals):
     return samples, labels, index
 
 
-def ohiot1dm(year, seq_length, seq_step, num_signals):
-    train = np.load('./data/ohiot1dm_train_'+year+'.npy')
-    print('load ohiot1dm_train from .npy')
+def mimic(year, seq_length, seq_step, num_signals):
+    train = np.load('./data/mimic_train_'+year+'.npy')
+    print('load mimic_train from .npy')
     m, n = train.shape  # m=562387, n=35
     # normalization
     for i in range(n - 1):
@@ -516,9 +516,9 @@ def ohiot1dm(year, seq_length, seq_step, num_signals):
 
     return samples, labels
 
-def ohiot1dm_test(year, seq_length, seq_step, num_signals):
-    test = np.load('./data/ohiot1dm_test_'+year+'.npy')
-    print('load ohiot1dm_test from .npy')
+def mimic_test(year, seq_length, seq_step, num_signals):
+    test = np.load('./data/mimic_test_'+year+'.npy')
+    print('load mimic_test from .npy')
 
     m, n = test.shape  # m1=494021, n1=35
 
@@ -571,9 +571,9 @@ def ohiot1dm_test(year, seq_length, seq_step, num_signals):
 
     return samples, labels, index
 
-def ohiot1dm_patient_wise(year, patient, seq_length, seq_step, num_signals):
-    train = np.load('./data/ohiot1dm_train_'+year+'_'+patient+'.npy')
-    print('load ohiot1dm_train from .npy')
+def mimic_patient_wise(year, patient, seq_length, seq_step, num_signals):
+    train = np.load('./data/mimic_train_'+year+'_'+patient+'.npy')
+    print('load mimic_train from .npy')
     m, n = train.shape  # m=562387, n=35
     # normalization
     for i in range(n - 1):
@@ -623,9 +623,9 @@ def ohiot1dm_patient_wise(year, patient, seq_length, seq_step, num_signals):
 
     return samples, labels
 
-def ohiot1dm_test_patient_wise(year, patient, seq_length, seq_step, num_signals):
-    test = np.load('./data/ohiot1dm_test_'+year+'_'+patient+'.npy')
-    print('load ohiot1dm_test from .npy')
+def mimic_test_patient_wise(year, patient, seq_length, seq_step, num_signals):
+    test = np.load('./data/mimic_test_'+year+'_'+patient+'.npy')
+    print('load mimic_test from .npy')
 
     m, n = test.shape  # m1=494021, n1=35
 
@@ -782,14 +782,14 @@ def get_data(data_type, seq_length, seq_step, num_signals, sub_id, eval_single, 
         samples, labels = wadi(seq_length, seq_step, num_signals)
     elif data_type == 'wadi_test':
         samples, labels, index = wadi_test(seq_length, seq_step, num_signals)
-    elif data_type == 'ohiot1dm':
-        samples, labels = ohiot1dm(year, seq_length, seq_step, num_signals)
-    elif data_type == 'ohiot1dm_test':
-        samples, labels, index = ohiot1dm_test(year, seq_length, seq_step, num_signals)
-    elif data_type == 'ohiot1dm_patient_wise':
-        samples, labels = ohiot1dm_patient_wise(year, patient, seq_length, seq_step, num_signals)
-    elif data_type == 'ohiot1dm_test_patient_wise':
-        samples, labels, index = ohiot1dm_test_patient_wise(year, patient, seq_length, seq_step, num_signals)
+    elif data_type == 'mimic':
+        samples, labels = mimic(year, seq_length, seq_step, num_signals)
+    elif data_type == 'mimic_test':
+        samples, labels, index = mimic_test(year, seq_length, seq_step, num_signals)
+    elif data_type == 'mimic_patient_wise':
+        samples, labels = mimic_patient_wise(year, patient, seq_length, seq_step, num_signals)
+    elif data_type == 'mimic_test_patient_wise':
+        samples, labels, index = mimic_test_patient_wise(year, patient, seq_length, seq_step, num_signals)
     else:
         raise ValueError(data_type)
     print('Generated/loaded', len(samples), 'samples from data-type', data_type)
