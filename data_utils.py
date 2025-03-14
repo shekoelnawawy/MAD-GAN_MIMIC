@@ -587,11 +587,6 @@ def mimic_patient_wise(year, patient, seq_length, seq_step, num_signals):
         else:
             train[:, i] = train[:, i]
 
-    print('train')
-    print(train)
-    print(train.shape)
-    print(type(train))
-    exit(1)
     samples = train[:, 0:n - 1]
     labels = train[:, n - 1]  # the last colummn is label
     #############################
