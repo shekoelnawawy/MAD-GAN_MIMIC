@@ -578,10 +578,10 @@ def mimic_patient_wise(year, patient, seq_length, seq_step, num_signals):
     # normalization
     for i in range(n - 1):
         # print('i=', i)
-        A = max(train[:, i])
+        A = float(max(train[:, i]))
         # print('A=', A)
         if A != 0:
-            train[:, i] /= max(train[:, i])
+            train[:, i] /= A#max(train[:, i])
             # scale from -1 to 1
             train[:, i] = 2 * train[:, i] - 1
         else:
