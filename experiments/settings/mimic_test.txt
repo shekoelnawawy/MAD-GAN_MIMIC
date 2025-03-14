@@ -1,6 +1,6 @@
 {
 "settings_file": "",
-"year": "2020",
+"year": "all",
 "patient": "0",
 "data": "ohiot1dm_test_patient_wise",
 "identifier": "ohiot1dm_test_patient_wise",
