@@ -575,6 +575,10 @@ def mimic_patient_wise(year, patient, seq_length, seq_step, num_signals):
     train = np.array(np.load('./data/mimic_train_'+year+'_'+patient+'.npy'), dtype=float)
     print('load mimic_train from .npy')
     m, n = train.shape  # m=562387, n=35
+    print('train.shape')
+    print(train.shape)
+    print('---------------------------')
+    exit(1)
     # normalization
     for i in range(n - 1):
         # print('i=', i)
