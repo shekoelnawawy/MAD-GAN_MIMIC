@@ -7,7 +7,7 @@ if os.path.exists('./output'):
 os.system('mkdir ./output')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -16,7 +16,7 @@ train_data[2] = "\"year\": \"most\",\n"
 train_data[3] = "\"patient\": \"0\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -24,7 +24,7 @@ os.system('mkdir ./output/most')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/most/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -36,7 +36,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -57,7 +57,7 @@ out.close()
 print('-----------------------------------------------------------------------------------------------------------------------------')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -66,7 +66,7 @@ train_data[2] = "\"year\": \"least\",\n"
 train_data[3] = "\"patient\": \"0\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -74,7 +74,7 @@ os.system('mkdir ./output/least')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/least/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -86,7 +86,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -107,7 +107,7 @@ out.close()
 print('-----------------------------------------------------------------------------------------------------------------------------')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -116,7 +116,7 @@ train_data[2] = "\"year\": \"all\",\n"
 train_data[3] = "\"patient\": \"0\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -124,7 +124,7 @@ os.system('mkdir ./output/all')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/all/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -136,7 +136,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -159,7 +159,7 @@ print('-------------------------------------------------------------------------
 
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -168,7 +168,7 @@ train_data[2] = "\"year\": \"2020\",\n"
 train_data[3] = "\"patient\": \"1\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -176,7 +176,7 @@ os.system('mkdir ./output/2020_1')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/2020_1/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -188,7 +188,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -211,7 +211,7 @@ print('-------------------------------------------------------------------------
 
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -220,7 +220,7 @@ train_data[2] = "\"year\": \"2020\",\n"
 train_data[3] = "\"patient\": \"2\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -228,7 +228,7 @@ os.system('mkdir ./output/2020_2')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/2020_2/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -240,7 +240,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -262,7 +262,7 @@ print('-------------------------------------------------------------------------
 
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -271,7 +271,7 @@ train_data[2] = "\"year\": \"2018\",\n"
 train_data[3] = "\"patient\": \"5\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -279,7 +279,7 @@ os.system('mkdir ./output/2018_5')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/2018_5/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -291,7 +291,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -313,7 +313,7 @@ print('-------------------------------------------------------------------------
 
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -322,7 +322,7 @@ train_data[2] = "\"year\": \"leastsub\",\n"
 train_data[3] = "\"patient\": \"0\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -330,7 +330,7 @@ os.system('mkdir ./output/leastsub_0')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/leastsub_0/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -342,7 +342,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -364,7 +364,7 @@ print('-------------------------------------------------------------------------
 
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -373,7 +373,7 @@ train_data[2] = "\"year\": \"leastsub\",\n"
 train_data[3] = "\"patient\": \"1\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -381,7 +381,7 @@ os.system('mkdir ./output/leastsub_1')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/leastsub_1/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -393,7 +393,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -415,7 +415,7 @@ print('-------------------------------------------------------------------------
 
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -424,7 +424,7 @@ train_data[2] = "\"year\": \"leastsub\",\n"
 train_data[3] = "\"patient\": \"2\",\n"
 
 # and write everything back
-with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+with open('experiments/settings/mimic.txt', 'w') as train_file:
     train_file.writelines(train_data)
 
 print('Training:')
@@ -432,7 +432,7 @@ os.system('mkdir ./output/leastsub_2')
 os.system('python RGAN.py --settings_file ohiot1dm > ./output/leastsub_2/train.txt')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+with open('experiments/settings/mimic_test.txt', 'r') as test_file:
     # read a list of lines into data
     test_data = test_file.readlines()
 
@@ -444,7 +444,7 @@ for year in [2020, 2018]:
         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
         # and write everything back
-        with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+        with open('experiments/settings/mimic_test.txt', 'w') as test_file:
             test_file.writelines(test_data)
 
         print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -465,7 +465,7 @@ out.close()
 print('-----------------------------------------------------------------------------------------------------------------------------')
 
 # with is like your try .. finally block in this case
-with open('./experiments/settings/ohiot1dm.txt', 'r') as train_file:
+with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
 
@@ -477,7 +477,7 @@ for run in range(10):
     train_data[3] = "\"patient\": \"" + str(run) + "\",\n"
 
     # and write everything back
-    with open('./experiments/settings/ohiot1dm.txt', 'w') as train_file:
+    with open('experiments/settings/mimic.txt', 'w') as train_file:
         train_file.writelines(train_data)
 
     print('Training:')
@@ -485,7 +485,7 @@ for run in range(10):
     os.system('python RGAN.py --settings_file ohiot1dm > ./output/samples/train_'+ str(run) + '.txt')
 
     # with is like your try .. finally block in this case
-    with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+    with open('experiments/settings/mimic_test.txt', 'r') as test_file:
         # read a list of lines into data
         test_data = test_file.readlines()
 
@@ -497,7 +497,7 @@ for run in range(10):
             test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 
             # and write everything back
-            with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+            with open('experiments/settings/mimic_test.txt', 'w') as test_file:
                 test_file.writelines(test_data)
 
             print('Year: '+str(year)+'\tPatient: '+str(patient))
@@ -539,7 +539,7 @@ out.close()
 # os.system('python RGAN.py --settings_file ohiot1dm > ./output/train_all.txt')
 #
 # # with is like your try .. finally block in this case
-# with open('./experiments/settings/ohiot1dm_test.txt', 'r') as test_file:
+# with open('./experiments/settings/mimic_test.txt', 'r') as test_file:
 #     # read a list of lines into data
 #     test_data = test_file.readlines()
 #
@@ -551,7 +551,7 @@ out.close()
 #         test_data[3] = "\"patient\": \"" + str(patient) + "\",\n"
 #
 #         # and write everything back
-#         with open('./experiments/settings/ohiot1dm_test.txt', 'w') as test_file:
+#         with open('./experiments/settings/mimic_test.txt', 'w') as test_file:
 #             test_file.writelines(test_data)
 #
 #         print('Year: '+str(year)+'\tPatient: '+str(patient))
