@@ -174,8 +174,7 @@ os.system('mkdir ./output')
 with open('experiments/settings/mimic.txt', 'r') as train_file:
     # read a list of lines into data
     train_data = train_file.readlines()
-print(train_data)
-exit(1)
+
 # now change the 2nd line, note that you have to add a newline
 train_data[2] = "\"year\": \"samples\",\n"
 
